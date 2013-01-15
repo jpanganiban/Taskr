@@ -1,0 +1,32 @@
+doctype 5
+html(lang="en")
+  head
+    title Taskr
+    link(type="text/css", rel="stylesheet", href="/static/style.css")
+    script(type="text/javascript", src="/static/jquery-min.js")
+    script(type="text/javascript", src="/static/underscore-min.js")
+    script(type="text/javascript", src="/static/backbone-min.js")
+    script(type="text/javascript", src="/static/app.js")
+    script(type="text/javascript")
+      $(document).ready(function() {
+        var app = new Taskr({
+          tasks: new Tasks(!{tasks})
+        }).render();
+      });
+  body
+    #app
+      h1 Taskr
+      form#tasks-form
+        input(type="text", class="name", name="name", placeholder="Enter your task")
+        input(type="submit", class="submit")
+      ul#tasks
+
+    script(type="text/html")#task
+      <div>
+      <input type=checkbox class=done></input>
+      <% if (!done) { %>
+      <input type=text class=name value="<%= name %>"></input>
+      <% } else { %>
+      <span class="name"><%= name %></span>
+      <% } %>
+      </div>

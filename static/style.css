@@ -1,0 +1,42 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('http://subtlepatterns.subtlepatterns.netdna-cdn.com/patterns/pw_maze_black.png')
+}
+ 
+#app {
+  background-color: rgba(255, 255, 255 ,0.1);
+  padding: 50px;
+  color: #ccc;
+  border-radius: 0 0 10px 10px;
+  width: 400px;
+  margin: auto;
+}
+
+#app h1,
+#app #tasks-form,
+#app #tasks {
+  margin: auto;
+  margin-top: 1em;
+  text-align: center;
+}
+
+#app #tasks-form .name {
+  font-size: 1.3em;
+  background-color: rgba(255, 255, 255 , 1);
+}
+
+#app #tasks-form .submit {
+  font-size: 1.3em;
+}
+
+#app #tasks li {
+  text-align: left; 
+  list-style: none;
+  margin-bottom: 0.5em;
+}
+
+#app #tasks li .name {
+  font-size: 1.3em;
+  border: 0;
+}
